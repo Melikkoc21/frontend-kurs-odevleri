@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c141d" />
+    <meta name="description" content="A responsive movie discovery catalog built with the JavaScript Fetch API." />
+    <title>MOVIEW — Movie Search</title>
+    <link rel="preconnect" href="https://image.tmdb.org" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Moview home">MOVI<span>EW</span></a>
+      <span class="header-note">A little something for movie night.</span>
+      <a class="header-link" href="#catalog">Explore films <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot"></span> YOUR NEXT MOVIE IS HERE</span>
+          <h1>Stories worth<br /><em>staying in for.</em></h1>
+          <p>Fresh picks, big-screen favorites, and the little details that help you choose.</p>
+          <a href="#catalog" class="hero-cta">Browse the collection <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-visual" aria-label="Featured movie posters">
+          <div class="poster-stack stack-one"><img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="" /><span>TOP GUN<br />MAVERICK</span></div>
+          <div class="poster-stack stack-two"><img src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg" alt="" /><span>MINIONS<br />RISE OF GRU</span></div>
+          <div class="poster-stack stack-three"><img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg" alt="" /><span>THOR<br />LOVE & THUNDER</span></div>
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <span class="hero-index">01 — 05 &nbsp; / &nbsp; NOW SHOWING</span>
+        </div>
+      </section>
+      <section class="catalog-section" id="catalog">
+        <div class="catalog-heading">
+          <div><span class="eyebrow">HANDPICKED FOR YOU</span><h2>MOVIEW</h2></div>
+          <form class="search-form" id="search-form" role="search">
+            <label class="sr-only" for="movie-search">Search movies</label>
+            <input id="movie-search" type="search" placeholder="Search movies" autocomplete="off" />
+            <button type="submit" aria-label="Search movies"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+          </form>
+        </div>
+        <p class="catalog-note" id="catalog-note">A small collection of movies to get you started.</p>
+        <div class="movie-grid" id="movie-grid" aria-live="polite" aria-busy="true"></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="#top">MOVI<span>EW</span></a><span>Made for your next movie night.</span><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>

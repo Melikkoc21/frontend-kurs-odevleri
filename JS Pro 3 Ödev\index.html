@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="description" content="Axios ile GitHub kullanıcı profil kartı arama uygulaması." />
+    <title>GitHub Profil Kartları</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <form class="search-panel" id="search-form">
+        <label class="sr-only" for="username-input">GitHub kullanıcı adı</label>
+        <input id="username-input" name="username" type="search" placeholder="GitHub Kullanıcısı" autocomplete="off" spellcheck="false" />
+        <button class="search-button" type="submit" aria-label="Kullanıcıyı ara">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+      </form>
+      <section id="result" class="result" aria-live="polite" aria-busy="false"></section>
+    </main>
+  </body>
+</html>

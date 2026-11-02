@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="A responsive Netflix-style landing page clone for a frontend course project." />
+    <title>Netflix — Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="showcase" id="top">
+        <div class="poster-wall" aria-hidden="true">
+          <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/bxgTSUenZDHNFerQ1whRKplrMKF.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/qBOKWqAFbveZ4ryjJJwbie6tXkQ.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/n1el846gLDXfhOvrRCsyvaAOQWv.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/ox4g4g7m1Y3Qn1Z8pWJ8kP3GmHd.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/bxgTSUenZDHNFerQ1whRKplrMKF.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/qBOKWqAFbveZ4ryjJJwbie6tXkQ.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/n1el846gLDXfhOvrRCsyvaAOQWv.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/ox4g4g7m1Y3Qn1Z8pWJ8kP3GmHd.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg" alt="" />
+          <img src="https://image.tmdb.org/t/p/w500/bxgTSUenZDHNFerQ1whRKplrMKF.jpg" alt="" />
+        </div>
+        <div class="showcase-shade"></div>
+        <header class="topbar">
+          <a class="netflix-logo" href="#top" aria-label="Netflix home">NETFLIX</a>
+          <button class="sign-in" type="button" data-open-modal="signin">Sign In</button>
+        </header>
+        <div class="hero-content">
+          <h1>See what's next</h1>
+          <p class="hero-subtitle">WATCH ANYWHERE. CANCEL ANYTIME</p>
+          <button class="primary-button" type="button" data-open-modal="join">WATCH FREE FOR 30 DAYS <span aria-hidden="true">›</span></button>
+          <p class="hero-fineprint">Ready to watch? Enter your email to create or restart your membership.</p>
+          <form class="email-cta" id="hero-email-form">
+            <label class="sr-only" for="hero-email">Email address</label>
+            <input id="hero-email" type="email" placeholder="Email address" required />
+            <button type="submit">TRY IT NOW <span aria-hidden="true">›</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="tabs-section" id="features">
+        <div class="tabs" role="tablist" aria-label="Netflix features">
+          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="tab-cancel" id="tab-button-cancel" data-tab="cancel">
+            <svg viewBox="0 0 48 40" aria-hidden="true"><path d="M8 5h20v28H8zM28 10h8l7 7v16H28zM14 11h8M14 17h8M14 23h8M16 33v4M36 33v4M7 37h34"/></svg><span>Cancel anytime</span>
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="tab-watch" id="tab-button-watch" data-tab="watch">
+            <svg viewBox="0 0 48 40" aria-hidden="true"><rect x="10" y="3" width="28" height="34" rx="2"/><path d="M14 8h20v22H14zM22 33h4"/></svg><span>Watch anywhere</span>
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="tab-price" id="tab-button-price" data-tab="price">
+            <svg viewBox="0 0 48 40" aria-hidden="true"><path d="M5 12V4h21l17 17-16 16L5 16z"/><circle cx="15" cy="12" r="2"/></svg><span>Pick your price</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="tab-panel active" id="tab-cancel" role="tabpanel" aria-labelledby="tab-button-cancel" data-panel="cancel">
+        <div class="tab-inner">
+          <div class="tab-copy"><p>If you decide Netflix isn't for you — no problem. No commitment. Cancel online anytime.</p><button class="secondary-button" type="button" data-open-modal="join">TRY IT NOW</button></div>
+          <div class="tab-art cancel-art"><div class="tv-frame"><div class="tv-screen"><span class="screen-mark">N</span><span>Unlimited stories.<br />No commitments.</span></div><div class="tv-stand"></div></div><div class="cancel-stamp">CANCEL<br />ANYTIME</div></div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-watch" role="tabpanel" aria-labelledby="tab-button-watch" data-panel="watch" hidden>
+        <div class="tab-inner watch-layout">
+          <div class="tab-copy"><p>Watch TV shows and movies anytime, anywhere — on your phone, tablet, laptop, and TV.</p><button class="secondary-button" type="button" data-open-modal="join">TRY IT NOW</button></div>
+          <div class="tab-art device-art"><div class="laptop"><div class="laptop-screen"><span class="screen-mark">N</span><span>Watch anywhere</span></div><div class="laptop-base"></div></div><div class="phone"><div class="phone-screen"><span class="screen-mark">N</span></div></div><div class="device-caption">TV · TABLET · PHONE · LAPTOP</div></div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-price" role="tabpanel" aria-labelledby="tab-button-price" data-panel="price" hidden>
+        <div class="price-intro"><p>Choose one plan that works for you. No extra costs, no contracts.</p><button class="secondary-button" type="button" data-open-modal="join">TRY IT NOW</button></div>
+        <div class="plan-table" role="table" aria-label="Demo plan comparison">
+          <div class="plan-row plan-head" role="row"><span role="columnheader">Plan</span><span role="columnheader">Basic</span><span role="columnheader">Standard</span><span role="columnheader">Premium</span></div>
+          <div class="plan-row" role="row"><span role="rowheader">Monthly price</span><span>€7.99</span><span>€12.99</span><span>€17.99</span></div>
+          <div class="plan-row" role="row"><span role="rowheader">HD available</span><span>—</span><span>✓</span><span>✓</span></div>
+          <div class="plan-row" role="row"><span role="rowheader">Ultra HD available</span><span>—</span><span>—</span><span>✓</span></div>
+          <div class="plan-row" role="row"><span role="rowheader">Screens at once</span><span>1</span><span>2</span><span>4</span></div>
+        </div>
+        <p class="plan-note">Sample prices are for this course demo only. No plan can be purchased here.</p>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <article class="faq-item"><button type="button" class="faq-question" aria-expanded="false">What is Netflix?<span aria-hidden="true">+</span></button><div class="faq-answer" hidden><p>Netflix is a course-project recreation of a streaming service landing page. This demo does not provide streaming or an account service.</p></div></article>
+          <article class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How much does Netflix cost?<span aria-hidden="true">+</span></button><div class="faq-answer" hidden><p>The plan table above contains sample prices to demonstrate the interface. This page does not process payments or start a subscription.</p></div></article>
+          <article class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Where can I watch?<span aria-hidden="true">+</span></button><div class="faq-answer" hidden><p>The responsive page works on desktop, tablet, and mobile screen sizes. The card art above shows a few sample device layouts.</p></div></article>
+          <article class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How do I cancel?<span aria-hidden="true">+</span></button><div class="faq-answer" hidden><p>There is no membership in this demo, so there is nothing to cancel. The tab demonstrates the original landing page feature.</p></div></article>
+          <article class="faq-item"><button type="button" class="faq-question" aria-expanded="false">What can I watch on Netflix?<span aria-hidden="true">+</span></button><div class="faq-answer" hidden><p>This project uses sample poster artwork for its background. It does not host or play films and shows.</p></div></article>
+        </div>
+        <div class="faq-cta"><p>Ready to watch? Enter your email to create or restart your membership.</p><form class="email-cta" id="footer-email-form"><label class="sr-only" for="footer-email">Email address</label><input id="footer-email" type="email" placeholder="Email address" required /><button type="submit">TRY IT NOW <span aria-hidden="true">›</span></button></form></div>
+      </section>
+
+      <footer class="site-footer"><p>Questions? Visit our Help Center.</p><div class="footer-links"><a href="#faq">FAQ</a><a href="#features">Help Center</a><a href="#features">Terms of Use</a><a href="#features">Privacy</a><a href="#features">Cookie Preferences</a><a href="#features">Corporate Information</a></div><span class="footer-country">Netflix-style landing page · course project</span></footer>
+    </main>
+
+    <div class="modal-backdrop" id="demo-modal" hidden>
+      <section class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close dialog">×</button>
+        <span class="modal-kicker">NETFLIX COURSE DEMO</span>
+        <h2 id="modal-title">Start watching</h2>
+        <p class="modal-copy">This is a visual demo. It does not create a Netflix account, send your information, or start a subscription.</p>
+        <form id="demo-form">
+          <label for="demo-email">Email address</label>
+          <input id="demo-email" name="email" type="email" placeholder="you@example.com" required />
+          <div class="signin-fields" hidden><label for="demo-password">Password</label><input id="demo-password" name="password" type="password" placeholder="Password" autocomplete="off" /></div>
+          <button class="modal-submit" type="submit">Continue</button>
+          <p class="modal-status" id="modal-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
+
